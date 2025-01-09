@@ -1,13 +1,13 @@
-*{
-    font-family: "Poppins" sans-serif;
-    margin: 0;
-    padding: 0;
+* {
+    margin:0;
+    padding:0;
     box-sizing: border-box;
     text-decoration: none;
-    outline: none;
+    border:none;
+    outline:none;
     scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
 }
-
 :root{
     --bg-color: #080808;
     --second-bg-color:#131313;
@@ -19,18 +19,16 @@ html{
     font-size: 60%;
     overflow-x: hidden;
 }
-
-body {
-    background: var(--bg-color);
+body{
+    background:var(--bg-color);
     color: var(--text-color);
 }
-
 .header{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 12% 2rem;
+    padding: 4rem 12% 4rem;
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     display: flex;
@@ -61,7 +59,10 @@ body {
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
 }
-
+.navbar a:hover{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);   
+}
 #menu-icon{
     font-size: 3.6rem;
     color: var(--main-color);
@@ -78,7 +79,6 @@ h1{
 p{
     text-align: justify;
 }
-
 .home{
     display: flex;
     align-items: center;
@@ -99,7 +99,6 @@ span{
 .logo span{
     color: var(--main-color);
 }
-
 .home-content h3{
     margin-bottom: 2rem;
     margin-top: 1rem;
@@ -123,7 +122,6 @@ span{
     cursor: pointer;
     transition: 0.5s ease-in-out;
 }
-
 .home-img img:hover{
     box-shadow: 0 0 25px var(--main-color),
                 0 0 50px var(--main-color),
@@ -276,291 +274,37 @@ span{
     flex-wrap: wrap;
     position: relative;
 }
-/* Adicionar o resto do estilo de educação !!!*/
-.servicos{
-    background: var(--bg-color);
-    color: black;
-}
-.servicos h2{
-    margin-bottom: 5rem;
-    color:white;
-}
-.sevicos-container{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    align-items: center;
-    gap: 2.5rem;
-}
-.servicos-box{
+.timeline-items::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
     background-color: var(--main-color);
-    height: 300;
-    border-radius: 3rem;
-    border: 5px solid transparent;
-    cursor: pointer;
-    margin: 4rem;
-    transition: 0.4s ease-in-out;
+    left: calc(50% - 1px);
 }
-.servicos-box:hover{
-    background: white;
-    color: black;
-    border: 5px solid var(--main-color);
-    transform: scale(1.03);
-}
-.servicos-box .servicos-info {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    max-height: 400px;
-    justify-content: left;
-    padding: 5rem 5rem;
-}
-.servicos-info h4{
-    font-size: 3rem;
-    font-weight: 800;
-    line-height: 2;
-}
-.servicos-info p{
-    font-size: 1.6rem;
-    font-weight: 600;
-    max-height: 300px;
-    line-height: 1.5rem;
-    margin: auto;
-}
-.ilustracoes{
-    background-color: var(--second-bg-color);
-}
-.ilustracoes-container{
-    display: block;
-    align-items: center;
-    grid-template-columns: repeat(3,1fr);
-    gap: 2.5rem;
-}
-.ilustracoes-box{
-    background-size: cover;
-    display:flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content:center;
-    flex-direction:row;
-}
-.ilustracoes .heading{
-    margin-bottom: 4rem;
-}
-.ilustracoes-box img{
-    height: 400px;
-    width: 400px;
-    border-radius: 5%;
-    border: 0px solid var(--main-color);
-    box-shadow: 0 0 50px var(--main-color);
-}
-.ilustracoes-item{
-    min-height: 400px;
-    max-width: 600px;
-    background: rgba(0, 0, 0, 0.7);
-    border: 3px solid var(--main-color);
-    border-radius: 5%;
-    margin: 50px;
-    padding: 50px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items:baseline;
-    justify-content: center;
-    gap: 1.3rem;
-    color: white;
-    transition: 0.4s ease-in-out;
-}
-.ilustracoes-item:hover{
-    border: 0px solid var(--main-color);
-    transform: translateY(-10px)scale(1.03);
-    box-shadow: 0 0 50px var(--main-color);
-}
-.contato{
-    background-color: var(--bg-color);
-}
-.contato h2{
-    margin-bottom: 3rem;
-    color: white;
-}
-.contato form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    margin: 5rem auto;
-    text-align: center;
-}
-.contato form .input-box{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.contato form .input-box input,
-.contato form textarea{
+.timeline-item{
+    margin-bottom: 40px;
     width: 100%;
-    padding: 2.5rem;
-    font-size: 1.8rem;
-    color: var(--text-color);
-    background-color: var(--second-bg-color);
-    border-radius: 2rem;
-    border: 2px solid var(--main-color);
-    margin: 1.5rem 0;
-    resize: none;
-}
-.contato form.btn{
-    margin-top: 2rem;
-}
-.footer{
     position: relative;
-    bottom: 0;
-    width: 100%;
-    padding: 40px 0;
-    background-color: var(--second-bg-color);
 }
-.footer .social{
-    text-align: center;
-    padding-bottom: 25px;
-    color: var(--main-color);
-}
-.footer .social a{
-    font-size: 25px;
-    color: var(--main-color);
-    border: 2px solid var(--main-color);
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 50%;
-    margin: 0 10px;
-    transition: 0.3s ease-in-out;
-}
-.footer .social a:hover{
-    transform: scale(1.2)translateY(-10px);
-    background-color: var(--main-color);
-    color: black;
-    box-shadow: 0 0 25px var(--main-color);
-}
-.footer ul{
-    margin-top: 0;
-    padding: 0;
-    font-size: 18px;
-    line-height: 1.6;
+.timeline-item:last-child{
     margin-bottom: 0;
-    text-align: center;
 }
-.footer ul li a{
-    color: white;
-    border-bottom: 3px solid transparent;
-    transition: 0.3s ease-in-out;
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+    text-align: right;
 }
-.footer ul li a:hover{
-    border-bottom: 3px solid var(--main-color);
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
 }
-.footer ul li{
-    display: inline-block;
-    padding: 0 15px;
-}
-.footer .copyright{
-    margin-top: 50px;
-    text-align: center;
-    font-size: 16px;
-    color: white;
-}
-
-@media(max-width:1285px){
-    html{
-        font-size: 55%;
-    }
-    .sevicos-container{
-        padding-bottom: 7rem;
-        grid-template-columns: repeat(2,1fr);
-        margin: 0 5rem;
-    }
-}
-@media(max-width:991px){
-    header{
-        padding: 2rem 3%;
-    }
-    section{
-        padding: 10rem 3% 2rem;
-    }
-    .timeline-items::before{
-        left: 7px;
-    }
-    .timeline-item:nth-child(odd){
-        padding-right: 0;
-        text-align: left;
-    }
-    .timeline-item:nth-child(odd),
-    .timeline-item:nth-child(even){
-        padding-left: 37px;
-    }
-    .timeline-dot{
-        left: 0;
-    }
-    .services{
-        padding-bottom: 7rem;
-    }
-    .ilustracoes .ilustracoes-container{
-        grid-template-columns: repeat(1,1fr);
-    }
-    .contact form{
-        flex-direction: column;
-    }
-    .footer{
-        padding: 2rem 3%;
-    }
-}
-
-@media(max-width:895px){
-    #menu-icon{
-        display: block;
-    }
-    .navbar{
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 50%;
-        padding: 1rem 3%;
-        background: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(20px);
-        border-bottom-left-radius: 2rem;
-        border-left: 2px solid var(--main-color);
-        border-bottom: 2px solid var(--main-color);
-        display: none;
-    }
-    .navbar.active{
-        display: block;
-    }
-    .navbar a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-        color: white;
-    }
-    .home{
-        flex-direction: column-reverse;
-        margin: 5rem 4rem;
-    }
-    .home-content h3{
-        font-size: 2.6rem;
-    }
-    .home-content h1{
-        font-size: 8rem;
-        margin-top: 3rem;
-    }
-    .home-content p{
-        max-width: 600;
-        margin: 0 auto;
-    }
-    .home-img{
-        width: 56vw;
-    }
-    .services h2{
-        margin-bottom: 3rem;
-    }
-    .sevices-container{
-        grid-template-columns: repeat(1,1fr);
-    }
+.timeline-dot{
+    height: 21px;
+    width: 21px;
+    background-color: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 25px var(--main-color);
+    position: absolute;
+    left: calc(50% - 5px);
+    border-radius: 50%;
+    top: 10px;
 }

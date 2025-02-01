@@ -44,11 +44,12 @@
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        background: var(--main-color);
+        background: rgb(77, 0, 177);
         transition: all 0.5s ease;
         backdrop-filter: blur(10px);
     }
     .nav-bar a{
+        background: rgb(77, 0, 177);
         display: block;
         padding: 17px;
         font-size: 22px;

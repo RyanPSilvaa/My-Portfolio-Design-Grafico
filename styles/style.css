@@ -69,8 +69,8 @@ section{
 }
 
 .nav-bar a:hover,
-.nav-bar a .active{
-    background: var(--main-color);
+.nav-bar a.active{
+    background: var(--main-color) !important;
 }
 
 #menu-icon{

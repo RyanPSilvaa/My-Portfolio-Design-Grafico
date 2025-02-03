@@ -36,27 +36,27 @@
         display: block;
     }
 
-    .nav-bar{
+    .navbar{
         position: absolute;
         top: 100%;
-        right: -100%;
-        width: 255px;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        background: rgb(77, 0, 177);
-        transition: all 0.5s ease;
-        backdrop-filter: blur(10px);
-    }
-    .nav-bar a{
-        background: rgb(77, 0, 177);
-        display: block;
-        padding: 17px;
-        font-size: 22px;
-    }
-
-    .nav-bar .active{
         right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: white;
     }
 
     .home{

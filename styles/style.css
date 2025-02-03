@@ -60,18 +60,18 @@ section{
     color: greenyellow;
 }
 
-.nav-bar a{
-    font-size: 1.9rem;
+.navbar a{
+    font-size: 1.8rem;
     color: var(--white-color);
     margin-left: 4rem;
     font-weight: 700;
     transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
 }
-
-.nav-bar a:hover,
-.nav-bar a.active{
-    right: 2%;
-    background: var(--main-color);
+.navbar a:hover{
+    color: greenyellow;
+    transform: scale(1.05);
+    border-bottom: 3px solid var(--main-color);   
 }
 
 #menu-icon{

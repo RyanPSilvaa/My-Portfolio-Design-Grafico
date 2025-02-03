@@ -80,14 +80,19 @@
         width: 70vw;
         margin-top: 4rem;
     }
-
-    .about{
-        flex-direction: column-reverse;
+    .timeline-items::before{
+        left: 7px;
     }
-
-    .about-img img{
-        width: 70vw;
-        margin-top: 4rem;
+    .timeline-item:nth-child(odd){
+        padding-right: 0;
+        text-align: left;
+    }
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even){
+        padding-left: 37px;
+    }
+    .timeline-dot{
+        left: 0;
     }
     .services h2{
         margin-bottom: 3rem;
